@@ -1,0 +1,12 @@
+{
+  "name": "dixa-form-proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "http-proxy": "^1.18.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+}
+}
