@@ -13,6 +13,9 @@ var proxy = httpProxy.createServer({
 });
 
 http.createServer(function(req, res) {
+    console.log(`request received`);
+    console.log(req);
+    console.log(res);
     proxy.web(req, res);                                                  
 }).listen(port);
 
