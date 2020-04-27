@@ -25,6 +25,6 @@ var server = http.createServer(function(req, res) {
         target: 'https://forms.dixa.io/v1/forms/734UO5aJSvUB6t12XJeV1S/2X7gnrIG6Fm53Wrwvh0D6g'
     });
 });
-
-console.log("listening on port 5050")
-server.listen(5050);
+const port = process.env.PORT || 8000;
+console.log(`listening on port ${port}}`)
+server.listen(port);
