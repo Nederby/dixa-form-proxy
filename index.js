@@ -16,3 +16,5 @@ http.createServer(function (req, res) {
   res.write('request successfully proxied!' + '\n' + JSON.stringify(req.headers, true, 2));
   res.end();
 }).listen(9000);
+
+console.log(`listening on port ${port}`)
