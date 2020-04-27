@@ -6,16 +6,14 @@ const port = 8000;
 //
 // Create your proxy server and set the target in the options.
 //
-const proxy = httpProxy.createProxyServer({}).listen(8000);
+var proxy = httpProxy.createServer({
+    xfwd: true,
+    target,
+    changeOrigin: true
+});
 
-//
-// Create your target server
-//
-http.createServer(function (req, res) {
-    proxy.web(req, res, {target, changeOrigin: true});
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.write('request successfully proxied!' + '\n' + JSON.stringify(req.headers, true, 2));
-    res.end();
-}).listen(9000);
+https.createServer(function(req, res) {
+    proxy.web(req, res);                                                  
+}).listen(port);
 
 console.log(`listening on port ${port}`)
