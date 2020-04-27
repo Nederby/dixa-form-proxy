@@ -22,7 +22,7 @@ var server = http.createServer(function(req, res) {
   // You can define here your custom logic to handle the request
   // and then proxy the request.
     proxy.web(req, res, {
-        target: 'http://127.0.0.1:5050'
+        target: 'https://forms.dixa.io/v1/forms/734UO5aJSvUB6t12XJeV1S/2X7gnrIG6Fm53Wrwvh0D6g'
     });
 });
 
