@@ -12,7 +12,7 @@ var proxy = httpProxy.createServer({
     changeOrigin: true
 });
 
-https.createServer(function(req, res) {
+http.createServer(function(req, res) {
     proxy.web(req, res);                                                  
 }).listen(port);
 
