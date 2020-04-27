@@ -26,7 +26,7 @@ var server = http.createServer(function(req, res) {
         changeOrigin: true,
     });
 });
-const port = 80;
+const port = process.env.PORT || 8000;
 console.log(`listening on port ${port}}`)
 server.listen(port);
 
